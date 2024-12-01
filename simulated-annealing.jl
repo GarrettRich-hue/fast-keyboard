@@ -10,7 +10,7 @@ function rectangularD(width::Int)::Matrix{Int64}
 end
 function main()
     B = jldopen("bigram-percent.jld2", "r")["bigramPercent"]
-    D = rectangularD(4)
+    D = rectangularD(5)
 
     perm = [1:26...]
 
@@ -46,6 +46,6 @@ function main()
         end
         T *= d
     end
-    jldsave("best-permutation-L.jld2"; bestPerm)
+    jldsave("best-permutation-L5.jld2"; bestPerm)
 end
 main()
